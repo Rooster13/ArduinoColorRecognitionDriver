@@ -24,8 +24,8 @@ void ColorRecognitionTCS230::initialize(unsigned char outPin,
     pinMode(s2Pin, OUTPUT);
     pinMode(s3Pin, OUTPUT);
     pinMode(outPin, INPUT);
-    Timer1.initialize();
-    Timer1.attachInterrupt(ColorRecognitionTCS230::timerInterruptHandler);
+    TwoMsTimer::set(2,ColorRecognitionTCS230::timerInterruptHandler);
+    TwoMsTimer::start();
     attachInterrupt((outPin - 2), ColorRecognitionTCS230::externalInterruptHandler, RISING);
 }
 
