@@ -12,7 +12,7 @@
 #define __ARDUINO_DRIVER_COLOR_RECOGNITION_TCS230_H__ 1
 
 #include <Arduino.h>
-#include <TimerOne.h>
+#include <TwoMsTimer.h>
 #include <ColorRecognition.h>
 
 /**
